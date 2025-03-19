@@ -14,13 +14,14 @@ def word_count(content):
 
 
 def char_count(content):
+    content = content.lower()
 
-    count = {}
+    dchar = {}
 
-    content.lower()
-    
-    for char in content:
-        num = content[char]
-        count[num] = count[num.count()]
-    
-    return count
+    for words in content:
+        if words in dchar:
+            dchar[words] += 1
+        else:
+            dchar[words] = 1
+            
+    return dchar

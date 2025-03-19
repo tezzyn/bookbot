@@ -11,9 +11,8 @@ def get_book_text(path_to_book):
 
 
 def main():
-    print(word_count(get_book_text("books/frankenstein.txt")))
+    print(word_count(get_book_text("books/frankenstein.txt")+"\n"))
 
-    print("  ")
 
     print(char_count(get_book_text("books/frankenstein.txt")))
 

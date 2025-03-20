@@ -27,6 +27,13 @@ def char_count(content):
     return dchar
 
 
+def sort_on(dict_of_chars):
+    for words in dict_of_chars:
+
+        sort = dict_of_chars[words] 
+    return sort
+
+
 def sort_dict(dict_of_chars):
 
     list_of_dicts = []
@@ -35,15 +42,14 @@ def sort_dict(dict_of_chars):
     # print(list(dict_of_chars), list(dict_of_chars.values()))
 
     for words in dict_of_chars:
-
-        # print(dict_of_chars[words])
-
+        
         solo_dict = {words:dict_of_chars[words]}
         if words.isalpha():
             list_of_dicts.append(solo_dict)
+            list_of_dicts.sort(reverse=True, key=sort_on) 
         solo_dict = {}
         
-    
+
     
 
     return list_of_dicts

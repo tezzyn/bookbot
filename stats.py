@@ -25,3 +25,26 @@ def char_count(content):
             dchar[words] = 1
             
     return dchar
+
+
+def sort_dict(dict_of_chars):
+
+    list_of_dicts = []
+    solo_dict = {}
+    
+    # print(list(dict_of_chars), list(dict_of_chars.values()))
+
+    for words in dict_of_chars:
+
+        # print(dict_of_chars[words])
+
+        solo_dict = {words:dict_of_chars[words]}
+        if words.isalpha():
+            list_of_dicts.append(solo_dict)
+        solo_dict = {}
+        
+    
+    
+
+    return list_of_dicts
+

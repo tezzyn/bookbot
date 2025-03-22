@@ -23,34 +23,39 @@ def char_count(content):
             dchar[words] += 1
         else:
             dchar[words] = 1
+
+    # print(dchar)
             
     return dchar
 
 
 def sort_on(dict_of_chars):
-    for words in dict_of_chars:
+    for foo in dict_of_chars:
+        num = dict_of_chars[foo]
+    return num
 
-        sort = dict_of_chars[words] 
-    return sort
 
 
 def sort_dict(dict_of_chars):
 
     list_of_dicts = []
-    solo_dict = {}
+
+
+
+    for foo in dict_of_chars:
+        if foo.isalpha():
+
+            # print(foo, dict_of_chars[foo])
+
+            bar = {foo:dict_of_chars[foo]}
+
+            list_of_dicts.append(bar)
+
     
-    # print(list(dict_of_chars), list(dict_of_chars.values()))
+    list_of_dicts.sort(reverse=True, key=sort_on)
 
-    for words in dict_of_chars:
-        
-        solo_dict = {words:dict_of_chars[words]}
-        if words.isalpha():
-            list_of_dicts.append(solo_dict)
-            list_of_dicts.sort(reverse=True, key=sort_on) 
-        solo_dict = {}
-        
+    for bar in list_of_dicts:
+        # print(bar)
 
-    
-
-    return list_of_dicts
-
+        for k, v in bar.items():
+            print(f"{k}: {v}")

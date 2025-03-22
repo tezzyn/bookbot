@@ -13,16 +13,20 @@ def get_book_text(path_to_book):
 
 def main():
 
+    text = get_book_text("books/frankenstein.txt")
+
     print("=========== BOOKBOT ============")
 
     print("Analyzing book found at books/frankenstein.txt...")
 
     print("----------- Word Count ----------")
     
-    print(word_count(get_book_text("books/frankenstein.txt")+"\n"))
+    print(word_count(text))
 
     print("--------- Character Count -------")
 
-    print(sort_dict(char_count(get_book_text("books/frankenstein.txt"))))
+    sort_dict(char_count(text))
+
+    print("============= END ===============")
 
 main()

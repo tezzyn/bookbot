@@ -9,7 +9,7 @@ def word_count(content):
     for words in contents:
         count += 1
 
-    return f"{count} words found in the document"
+    return count
 
 
 
